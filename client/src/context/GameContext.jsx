@@ -21,25 +21,39 @@ const STORAGE_KEYS = {
 function savePlayerSession(pin, player) {
   if (!pin || !player?.id) return;
 
-  localStorage.setItem(STORAGE_KEYS.PIN, pin);
-  localStorage.setItem(STORAGE_KEYS.PLAYER_ID, player.id);
+  sessionStorage.setItem(
+    STORAGE_KEYS.PIN,
+    pin
+  );
+
+  sessionStorage.setItem(
+    STORAGE_KEYS.PLAYER_ID,
+    player.id
+  );
 
   if (player.name) {
-    localStorage.setItem(
+    sessionStorage.setItem(
       STORAGE_KEYS.PLAYER_NAME,
       player.name
     );
   }
-}
 
-function clearPlayerSession() {
+  // Remove legacy shared values so another tab
+  // cannot restore the wrong player's identity.
   localStorage.removeItem(STORAGE_KEYS.PIN);
   localStorage.removeItem(STORAGE_KEYS.PLAYER_ID);
   localStorage.removeItem(STORAGE_KEYS.PLAYER_NAME);
+}
 
-  // Clean old sessionStorage values from previous version.
-  sessionStorage.removeItem('churchquiz_pin');
-  sessionStorage.removeItem('churchquiz_player_id');
+function clearPlayerSession() {
+  sessionStorage.removeItem(STORAGE_KEYS.PIN);
+  sessionStorage.removeItem(STORAGE_KEYS.PLAYER_ID);
+  sessionStorage.removeItem(STORAGE_KEYS.PLAYER_NAME);
+
+  // Clean values created by older versions.
+  localStorage.removeItem(STORAGE_KEYS.PIN);
+  localStorage.removeItem(STORAGE_KEYS.PLAYER_ID);
+  localStorage.removeItem(STORAGE_KEYS.PLAYER_NAME);
 }
 
 export const GameProvider = ({ children }) => {
@@ -238,19 +252,13 @@ export const GameProvider = ({ children }) => {
   const restorePlayerSession =
     useCallback(() => {
       const savedPin =
-        localStorage.getItem(
-          STORAGE_KEYS.PIN
-        ) ||
         sessionStorage.getItem(
-          'churchquiz_pin'
+          STORAGE_KEYS.PIN
         );
 
       const savedPlayerId =
-        localStorage.getItem(
-          STORAGE_KEYS.PLAYER_ID
-        ) ||
         sessionStorage.getItem(
-          'churchquiz_player_id'
+          STORAGE_KEYS.PLAYER_ID
         );
 
       if (
@@ -764,11 +772,8 @@ export const GameProvider = ({ children }) => {
       restorePlayerSession();
     } else {
       const savedPlayerId =
-        localStorage.getItem(
-          STORAGE_KEYS.PLAYER_ID
-        ) ||
         sessionStorage.getItem(
-          'churchquiz_player_id'
+          STORAGE_KEYS.PLAYER_ID
         );
 
       if (!savedPlayerId) {
