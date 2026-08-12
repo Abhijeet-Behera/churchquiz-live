@@ -1,0 +1,132 @@
+[
+  {
+    "id": "q1",
+    "question": "Who was commanded by God to build the Ark before the great flood?",
+    "options": [
+      "Moses",
+      "Noah",
+      "Abraham",
+      "David"
+    ],
+    "correctOption": 1,
+    "duration": 15,
+    "explanation": "In Genesis 6, God commanded Noah to build an ark of gopherwood to save his family and animals from the flood."
+  },
+  {
+    "id": "q2",
+    "question": "In which city was Jesus born?",
+    "options": [
+      "Nazareth",
+      "Jerusalem",
+      "Bethlehem",
+      "Capernaum"
+    ],
+    "correctOption": 2,
+    "duration": 15,
+    "explanation": "As prophesied in Micah 5:2 and recorded in Micah & Luke 2, Jesus was born in Bethlehem of Judea."
+  },
+  {
+    "id": "q3",
+    "question": "Which prophet was swallowed by a great fish after fleeing God's command?",
+    "options": [
+      "Elijah",
+      "Jonah",
+      "Daniel",
+      "Jeremiah"
+    ],
+    "correctOption": 1,
+    "duration": 15,
+    "explanation": "Jonah tried to flee to Tarshish, but God prepared a great fish to swallow him for three days and nights."
+  },
+  {
+    "id": "q4",
+    "question": "What is the first book of the Bible?",
+    "options": [
+      "Exodus",
+      "Psalms",
+      "Genesis",
+      "Matthew"
+    ],
+    "correctOption": 2,
+    "duration": 15,
+    "explanation": "Genesis is the first book of the Old Testament, opening with God's creation of the heavens and the earth."
+  },
+  {
+    "id": "q5",
+    "question": "Who defeated the Philistine giant Goliath with a sling and a stone?",
+    "options": [
+      "Solomon",
+      "Samson",
+      "Saul",
+      "David"
+    ],
+    "correctOption": 3,
+    "duration": 15,
+    "explanation": "In 1 Samuel 17, the young shepherd boy David trusted God and struck Goliath down with a single sling stone."
+  },
+  {
+    "id": "q6",
+    "question": "How many apostles did Jesus choose to follow Him closely during His ministry?",
+    "options": [
+      "7",
+      "10",
+      "12",
+      "40"
+    ],
+    "correctOption": 2,
+    "duration": 15,
+    "explanation": "Jesus chose twelve disciples/apostles as listed in Matthew 10:2-4 to be His primary witnesses."
+  },
+  {
+    "id": "q7",
+    "question": "Which sea did Moses divide with his staff by God's power?",
+    "options": [
+      "The Red Sea",
+      "The Dead Sea",
+      "The Sea of Galilee",
+      "The Mediterranean Sea"
+    ],
+    "correctOption": 0,
+    "duration": 15,
+    "explanation": "In Exodus 14, God commanded Moses to lift his staff over the Red Sea, parting the waters for Israel."
+  },
+  {
+    "id": "q8",
+    "question": "Which fruit of the Spirit is named first in Galatians 5:22?",
+    "options": [
+      "Joy",
+      "Peace",
+      "Love",
+      "Patience"
+    ],
+    "correctOption": 2,
+    "duration": 15,
+    "explanation": "Galatians 5:22 states: 'But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith...'"
+  },
+  {
+    "id": "q9",
+    "question": "Who was swallowed into a den of lions for praying to God against the king's decree?",
+    "options": [
+      "Shadrach",
+      "Daniel",
+      "Ezekiel",
+      "Nehemiah"
+    ],
+    "correctOption": 1,
+    "duration": 15,
+    "explanation": "In Daniel 6, Daniel remained faithful in prayer and was thrown into the lions' den, where God shut the lions' mouths."
+  },
+  {
+    "id": "q10",
+    "question": "What gift did King Solomon pray for when God appeared to him in a dream?",
+    "options": [
+      "Riches",
+      "Long Life",
+      "Wisdom",
+      "Military Power"
+    ],
+    "correctOption": 2,
+    "duration": 15,
+    "explanation": "In 1 Kings 3, Solomon asked God for an understanding heart and wisdom to govern His people."
+  }
+]

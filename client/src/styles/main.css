@@ -1,0 +1,351 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --bg-surface: #334155;
+  --accent-gold: #fbbf24;
+  --accent-gold-hover: #f59e0b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --option-a: #e11d48;
+  --option-a-hover: #f43f5e;
+  --option-b: #2563eb;
+  --option-b-hover: #3b82f6;
+  --option-c: #d97706;
+  --option-c-hover: #f59e0b;
+  --option-d: #059669;
+  --option-d-hover: #10b981;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: radial-gradient(circle at top center, #1e1b4b 0%, #0f172a 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+.brand-text {
+  font-family: var(--font-heading);
+}
+
+/* Base Container */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Card Styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
+  color: #0f172a;
+  box-shadow: 0 4px 14px 0 rgba(251, 191, 36, 0.39);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(251, 191, 36, 0.5);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: var(--bg-dark);
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+/* Projector Grid / Option Cards */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option-btn {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 3px solid transparent;
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 80px;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.option-btn.opt-0 {
+  background: var(--option-a);
+}
+
+.option-btn.opt-1 {
+  background: var(--option-b);
+}
+
+.option-btn.opt-2 {
+  background: var(--option-c);
+}
+
+.option-btn.opt-3 {
+  background: var(--option-d);
+}
+
+.option-btn.selected {
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.option-badge {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* Leaderboard */
+.leaderboard-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.leaderboard-item {
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 6px solid var(--bg-surface);
+}
+
+.leaderboard-item.rank-1 {
+  border-left-color: #fbbf24;
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.15) 0%, var(--bg-card) 100%);
+}
+
+.leaderboard-item.rank-2 {
+  border-left-color: #94a3b8;
+}
+
+.leaderboard-item.rank-3 {
+  border-left-color: #d97706;
+}
+
+/* Status Badges */
+.badge-pin {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  background: rgba(251, 191, 36, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 2px dashed var(--accent-gold);
+}
+
+
+/* =========================================================
+   CHURCHQUIZ LIGHTFALL BACKGROUND
+   ========================================================= */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+
+  background: #160307;
+
+  overflow-x: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   Full-screen WebGL background
+   --------------------------------------------------------- */
+
+.lightfall-global-background {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background: #160307;
+}
+
+
+/* Make Lightfall fill the viewport */
+
+.lightfall-global-background>div:first-child {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   Dark layer over Lightfall
+
+   Prevents bright white/red streaks from making
+   question text or cards difficult to read.
+   --------------------------------------------------------- */
+
+.lightfall-readability-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(180deg,
+      rgba(8, 2, 4, 0.18) 0%,
+      rgba(10, 2, 5, 0.30) 50%,
+      rgba(5, 1, 3, 0.42) 100%);
+}
+
+
+/* ---------------------------------------------------------
+   Put the application above Lightfall
+   --------------------------------------------------------- */
+
+.churchquiz-app-layer {
+  position: relative;
+
+  z-index: 10;
+
+  min-height: 100vh;
+}
+
+
+/*
+ * Existing page containers should not cover
+ * the WebGL background with the old navy background.
+ */
+
+.app-container {
+  position: relative;
+
+  z-index: 1;
+
+  background: transparent !important;
+}

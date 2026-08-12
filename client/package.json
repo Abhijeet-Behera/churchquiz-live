@@ -1,0 +1,27 @@
+{
+  "name": "church-quiz-live-client",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:host": "cross-env VITE_APP_MODE=host vite --port 5173 --host 0.0.0.0",
+    "dev:player": "cross-env VITE_APP_MODE=player vite --port 5174 --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@clerk/react": "^6.14.1",
+    "ogl": "^1.0.11",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "vite": "^5.2.11"
+  }
+}
