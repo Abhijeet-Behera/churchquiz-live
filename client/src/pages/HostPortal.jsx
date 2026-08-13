@@ -432,7 +432,7 @@ export function HostPortal() {
                     }}
                 >
                     <SignOutButton
-                        redirectUrl="/login"
+                        redirectUrl="/"
                     >
                         <button
                             type="button"
