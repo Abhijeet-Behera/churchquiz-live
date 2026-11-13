@@ -1,3 +1,4 @@
+
 # ChurchQuiz Live ⛪ live multiplayer quiz platform
 
 ChurchQuiz Live is an original, browser-based, real-time multiplayer quiz game designed specifically for church events, youth group gatherings, and projector presentations.
@@ -94,7 +95,9 @@ The backend uses a pure function `calculateScore(isCorrect, responseTimeMs, dura
 - **Wrong Answer**: `0 points`
 - **Correct Answer**: Between `500` and `1000` points based on speed ratio.
 - **Formula**:
+
   $$\text{speedRatio} = \max\left(0, 1 - \frac{\text{responseTimeMs}}{\text{durationMs}}\right)$$
+
   $$\text{score} = \text{round}(500 + 500 \times \text{speedRatio})$$
 
 ### Tie-Breaking Rules
@@ -132,7 +135,7 @@ The backend uses a pure function `calculateScore(isCorrect, responseTimeMs, dura
 
 ## 12. Project Folder Structure
 
-```
+```text
 church-quiz-live/
 ├── client/
 │   ├── index.html
@@ -189,7 +192,8 @@ church-quiz-live/
 ## 13. Known MVP Limitations
 - In-memory storage: Game sessions cleared on backend server restart.
 - No user authentication or persistent account database.
-- Up to 100 players per game session.
+- Tested with 280 participants in a real-world session.
+- Designed to scale up to 300 participants per game session.
 
 ---
 
